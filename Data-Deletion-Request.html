@@ -127,137 +127,256 @@
 <body>
     <div class="container">
         <h1>Data Deletion Request</h1>
-        <p class="last-updated">Last Updated: March 2026</p>
+        <p class="last-updated">Last Updated: April 1, 2026</p>
 
         <p><strong>App:</strong> BlinkRead<br>
         <strong>Developer:</strong> Re:sauce<br>
+        <strong>Package:</strong> com.resauce.blinkread<br>
         <strong>Contact:</strong> <a href="mailto:Resauce.ml@gmail.com">Resauce.ml@gmail.com</a></p>
 
-        <h2>1. Data Stored on Your Device</h2>
-        <p>BlinkRead stores all user data locally on your device. We do not transmit or store any data on external servers.</p>
-        
+        <h2>1. Overview</h2>
+        <p>BlinkRead stores all user data locally on your device. We do not transmit or store any user data on our servers. All reading content, bookmarks, preferences, statistics, achievements, challenge progress, and scanned documents are stored exclusively in your device's local database and preferences.</p>
+
+        <h2>2. Data Stored on Your Device</h2>
         <table>
             <tr>
                 <th>Data Type</th>
                 <th>Description</th>
+                <th>Storage Location</th>
                 <th>Deleted on Uninstall?</th>
             </tr>
             <tr>
                 <td>Reading Progress</td>
-                <td>Book reading position and progress</td>
-                <td>✅ Yes</td>
+                <td>Book reading position and progress per book</td>
+                <td>Room Database</td>
+                <td>&#x2705; Yes</td>
             </tr>
             <tr>
                 <td>Bookmarks</td>
                 <td>Bookmarks you've created in books</td>
-                <td>✅ Yes</td>
+                <td>Room Database</td>
+                <td>&#x2705; Yes</td>
+            </tr>
+            <tr>
+                <td>Reading Sessions</td>
+                <td>Session history (WPM, duration, words read)</td>
+                <td>Room Database</td>
+                <td>&#x2705; Yes</td>
             </tr>
             <tr>
                 <td>User Preferences</td>
-                <td>Theme, font size, reading speed settings</td>
-                <td>✅ Yes</td>
+                <td>Theme, font size, reading speed, colors, bionic mode</td>
+                <td>Android DataStore</td>
+                <td>&#x2705; Yes</td>
             </tr>
             <tr>
                 <td>Reading Statistics</td>
-                <td>Words read, reading time, WPM history</td>
-                <td>✅ Yes</td>
+                <td>Total words read, total reading time, session count</td>
+                <td>Android DataStore</td>
+                <td>&#x2705; Yes</td>
             </tr>
             <tr>
-                <td>Imported Files</td>
-                <td>Books you've imported (processed temporarily)</td>
-                <td>✅ Yes</td>
+                <td>Achievements</td>
+                <td>Unlocked achievement IDs and timestamps</td>
+                <td>Android DataStore</td>
+                <td>&#x2705; Yes</td>
+            </tr>
+            <tr>
+                <td>Challenge Progress</td>
+                <td>Daily challenge day, WPM history, quiz scores</td>
+                <td>Room Database</td>
+                <td>&#x2705; Yes</td>
+            </tr>
+            <tr>
+                <td>Imported Books</td>
+                <td>Books you've imported (file references, not copies)</td>
+                <td>Room Database + DataStore</td>
+                <td>&#x2705; Yes</td>
+            </tr>
+            <tr>
+                <td>Clipboard Saves</td>
+                <td>Text you've pasted and saved</td>
+                <td>Room Database</td>
+                <td>&#x2705; Yes</td>
+            </tr>
+            <tr>
+                <td>Scanned Documents</td>
+                <td>OCR results from document scanner</td>
+                <td>Room Database</td>
+                <td>&#x2705; Yes</td>
+            </tr>
+            <tr>
+                <td>Screen Recordings</td>
+                <td>Video files from the recording feature</td>
+                <td>App External Storage</td>
+                <td>&#x2705; Yes</td>
+            </tr>
+            <tr>
+                <td>Premium Status</td>
+                <td>Purchase token for Premium unlock</td>
+                <td>Android DataStore</td>
+                <td>&#x2705; Yes</td>
             </tr>
         </table>
 
-        <h2>2. Data Collected by Google AdMob</h2>
-        <p>BlinkRead uses Google AdMob to display advertisements. AdMob may collect:</p>
-        <ul>
-            <li>Device identifiers</li>
-            <li>Ad interaction data</li>
-            <li>IP address</li>
-            <li>Device information</li>
-        </ul>
+        <h2>3. Data Collected by Third-Party Services</h2>
+        <p>BlinkRead uses the following Google services which may collect data on their servers:</p>
+
+        <table>
+            <tr>
+                <th>Service</th>
+                <th>Data Collected</th>
+                <th>Deletion Method</th>
+            </tr>
+            <tr>
+                <td>Google AdMob</td>
+                <td>Advertising ID, device info, ad interactions, IP address, approximate location</td>
+                <td>See Method 3 below</td>
+            </tr>
+            <tr>
+                <td>Firebase Analytics</td>
+                <td>Device info, app usage, session data, country/language, app events</td>
+                <td>See Method 3 below</td>
+            </tr>
+            <tr>
+                <td>Firebase Crashlytics</td>
+                <td>Crash logs, device info, app version</td>
+                <td>See Method 3 below</td>
+            </tr>
+            <tr>
+                <td>Google Play Billing</td>
+                <td>Purchase tokens, product IDs</td>
+                <td>Managed by Google Play</td>
+            </tr>
+            <tr>
+                <td>Google ML Kit</td>
+                <td>Usage telemetry (images processed on-device only)</td>
+                <td>See Method 3 below</td>
+            </tr>
+        </table>
 
         <div class="warning">
-            <strong>Important:</strong> AdMob data is stored on Google's servers and is NOT deleted when you uninstall BlinkRead. You must request deletion directly from Google.
+            <strong>Important:</strong> Data collected by Google AdMob, Firebase Analytics, and Firebase Crashlytics is stored on Google's servers and is NOT deleted when you uninstall BlinkRead. You must request deletion directly from Google using the steps below.
         </div>
 
-        <h2>3. How to Delete Your Data</h2>
+        <h2>4. How to Delete Your Data</h2>
 
         <div class="method-box">
             <h3>Method 1: Clear App Data (Preserves App)</h3>
+            <p>Deletes all local data but keeps the app installed:</p>
             <ol>
                 <li>Open <strong>Android Settings</strong></li>
-                <li>Go to <strong>Apps</strong> → <strong>BlinkRead</strong></li>
-                <li>Tap <strong>Storage</strong></li>
-                <li>Tap <strong>Clear Data</strong></li>
+                <li>Go to <strong>Apps</strong> &rarr; <strong>BlinkRead</strong></li>
+                <li>Tap <strong>Storage</strong> (or <strong>Storage &amp; cache</strong>)</li>
+                <li>Tap <strong>Clear Data</strong> (or <strong>Clear storage</strong>)</li>
                 <li>Confirm the action</li>
             </ol>
-            <p><em>This deletes all local data but keeps the app installed.</em></p>
+            <p><em>This removes all reading progress, bookmarks, preferences, statistics, achievements, challenge progress, clipboard saves, scanned documents, and session history. The app remains installed with default settings.</em></p>
         </div>
 
         <div class="method-box">
             <h3>Method 2: Uninstall the App</h3>
+            <p>Permanently removes all local data:</p>
             <ol>
                 <li>Open <strong>Android Settings</strong></li>
-                <li>Go to <strong>Apps</strong> → <strong>BlinkRead</strong></li>
+                <li>Go to <strong>Apps</strong> &rarr; <strong>BlinkRead</strong></li>
                 <li>Tap <strong>Uninstall</strong></li>
                 <li>Confirm the action</li>
             </ol>
-            <p><em>This removes all local data permanently.</em></p>
+            <p><em>This removes all local data permanently, including any screen recordings saved to app storage.</em></p>
         </div>
 
         <div class="method-box">
-            <h3>Method 3: Delete AdMob Data from Google</h3>
-            <p>To delete data collected by Google AdMob:</p>
+            <h3>Method 3: Delete AdMob / Firebase Data from Google</h3>
+            <p>Data collected by Google AdMob, Firebase Analytics, and Firebase Crashlytics is stored on Google's servers. To delete this data:</p>
             <ol>
-                <li>Visit <a href="https://myaccount.google.com/data-and-privacy">Google Account Data & Privacy</a></li>
-                <li>Sign in with your Google account</li>
-                <li>Go to <strong>Ad settings</strong> or <strong>Privacy & personalization</strong></li>
-                <li>Request deletion of ad-related data</li>
+                <li>Visit <a href="https://myaccount.google.com/data-and-privacy">Google Account Data &amp; Privacy</a></li>
+                <li>Sign in with the Google account used on your device</li>
+                <li>Under <strong>Data from apps and services you use</strong>, find and manage data associated with BlinkRead</li>
+                <li>Go to <strong>Ad settings</strong> &rarr; toggle off <strong>Ad Personalization</strong></li>
+                <li>Go to <strong>Activity controls</strong> &rarr; <strong>Web &amp; App Activity</strong> &rarr; <strong>Delete activity by</strong> &rarr; select the relevant time range</li>
+                <li>For Firebase data: visit <a href="https://support.google.com/firebase/answer/9018821">Google Firebase support</a> for data deletion instructions</li>
             </ol>
             <div class="info">
-                <strong>Note:</strong> AdMob data is managed by Google, not BlinkRead. You must contact Google directly to delete this data.
+                <strong>Note:</strong> AdMob and Firebase data is managed entirely by Google. BlinkRead does not have access to or control over this data. You must contact Google directly to delete it. Alternatively, email us and we will forward your request to Google on your behalf.
             </div>
         </div>
 
-        <h2>4. Data Retention Periods</h2>
+        <div class="method-box">
+            <h3>Method 4: Email Deletion Request</h3>
+            <p>For a formal data deletion request, or if you need assistance:</p>
+            <ol>
+                <li>Send an email to <a href="mailto:Resauce.ml@gmail.com">Resauce.ml@gmail.com</a></li>
+                <li>Use the subject line: <strong>"BlinkRead Data Deletion Request"</strong></li>
+                <li>Include your device ID or Google account email (optional, helps us verify your request)</li>
+                <li>We will respond within <strong>7 business days</strong></li>
+            </ol>
+            <p><em>Since all app data is stored locally on your device, we will guide you through Methods 1-3. For AdMob/Firebase data, we will forward your request to Google.</em></p>
+        </div>
+
+        <h2>5. Data Retention Periods</h2>
         <table>
             <tr>
                 <th>Data Type</th>
+                <th>Where Stored</th>
                 <th>Retention Period</th>
                 <th>Deletion Method</th>
             </tr>
             <tr>
                 <td>Local App Data</td>
+                <td>Your device</td>
                 <td>Until you delete it</td>
                 <td>Clear Data or Uninstall</td>
             </tr>
             <tr>
                 <td>AdMob Data</td>
-                <td>Per Google's policy</td>
-                <td>Contact Google</td>
+                <td>Google servers</td>
+                <td>Per <a href="https://policies.google.com/privacy">Google's Privacy Policy</a></td>
+                <td>Google Account settings</td>
+            </tr>
+            <tr>
+                <td>Firebase Analytics Data</td>
+                <td>Google servers</td>
+                <td>Up to 26 months (default retention)</td>
+                <td>Google Account settings or request deletion</td>
+            </tr>
+            <tr>
+                <td>Firebase Crashlytics Data</td>
+                <td>Google servers</td>
+                <td>Up to 90 days (crash logs)</td>
+                <td>Automatically expires</td>
             </tr>
         </table>
 
-        <h2>5. Contact Us</h2>
+        <h2>6. What Gets Deleted</h2>
+        <p>When you delete your local data (Methods 1 or 2):</p>
+        <ul>
+            <li>&#x2705; All reading progress for all books</li>
+            <li>&#x2705; All bookmarks</li>
+            <li>&#x2705; All user preferences (theme, font, speed settings)</li>
+            <li>&#x2705; All reading statistics (words read, time spent, WPM)</li>
+            <li>&#x2705; All reading session history</li>
+            <li>&#x2705; All imported book references</li>
+            <li>&#x2705; All clipboard saves</li>
+            <li>&#x2705; All scanned documents</li>
+            <li>&#x2705; All achievement progress</li>
+            <li>&#x2705; All challenge progress and quiz scores</li>
+            <li>&#x2705; All screen recordings</li>
+            <li>&#x2705; Premium purchase status (can be restored via Google Play)</li>
+        </ul>
+        <p><strong>Third-party data (AdMob, Firebase) requires separate deletion through Google (Method 3).</strong></p>
+
+        <h2>7. GDPR &amp; EEA/UK Rights</h2>
+        <p>If you are located in the European Economic Area (EEA), United Kingdom, or Switzerland, you have the right to request deletion of your data under the General Data Protection Regulation (GDPR). Since all BlinkRead data is stored locally on your device, you can exercise this right at any time using the methods above. For data processed by Google's services, you may also exercise your rights directly with Google.</p>
+
+        <h2>8. Contact Us</h2>
         <div class="contact-info">
             <h3>Re:sauce</h3>
             <p>If you need assistance deleting your data or have questions about data privacy:</p>
             <p><strong>Email:</strong> <a href="mailto:Resauce.ml@gmail.com">Resauce.ml@gmail.com</a></p>
+            <p><strong>Subject Line:</strong> "BlinkRead Data Deletion Request"</p>
             <p><strong>Response Time:</strong> We will respond within 7 business days.</p>
         </div>
-
-        <h2>6. What Gets Deleted</h2>
-        <p>When you delete your data:</p>
-        <ul>
-            <li>✅ All reading progress</li>
-            <li>✅ All bookmarks</li>
-            <li>✅ All user preferences</li>
-            <li>✅ All reading statistics</li>
-            <li>✅ All imported book files</li>
-        </ul>
-        <p><strong>AdMob data requires separate deletion through Google.</strong></p>
     </div>
 </body>
 </html>
