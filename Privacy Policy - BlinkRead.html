@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - BlinkRead</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+        h2 {
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            border-bottom: 2px solid #704214;
+            padding-bottom: 8px;
+        }
+        h3 {
+            color: #555;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background: #704214;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        .last-updated {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        .contact-info {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .contact-info h3 {
+            margin-top: 0;
+        }
+        a {
+            color: #704214;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .highlight {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last Updated: April 8, 2026</p>
+
+        <h2>1. Introduction</h2>
+        <p>BlinkRead ("we," "our," or "us") is a speed reading application developed and operated by Re:sauce. This Privacy Policy explains how we collect, use, disclose, and safeguard information when you use our mobile application.</p>
+        <p>BlinkRead is designed with privacy in mind. Your reading content &mdash; books, documents, clipboard text, and scanned images &mdash; never leaves your device. The app displays advertisements through Google AdMob to support the free version, and uses Firebase Analytics to understand how the app is used.</p>
+
+        <h2>2. Information We Collect</h2>
+
+        <h3>2.1 Information You Provide</h3>
+        <ul>
+            <li><strong>Files you import</strong>: When you use the file picker to import PDF, EPUB, or TXT files, these files are processed locally on your device. We do not upload or store these files on any external server.</li>
+            <li><strong>Clipboard text</strong>: When you paste text from your clipboard, the content is saved locally in the app's database. We do not transmit clipboard content to any server.</li>
+            <li><strong>Scanned documents</strong>: When you use the document scanner, images are processed on-device using Google ML Kit's text recognition. Scanned images and extracted text are stored locally. Images are not uploaded to any server.</li>
+            <li><strong>Reading preferences</strong>: Settings you configure (themes, font size, reading speed, bionic mode, etc.) are stored locally on your device using Android DataStore.</li>
+            <li><strong>Bookmarks</strong>: Any bookmarks you create are stored locally in the app's database.</li>
+            <li><strong>Reading statistics</strong>: Words read, time spent, WPM, achievements, and challenge progress are stored locally.</li>
+            <li><strong>Screen recordings</strong>: If you use the screen recording feature, video files are saved locally to your device. Recordings are never uploaded or shared without your explicit action.</li>
+            <li><strong>In-app purchases</strong>: If you purchase Premium, your purchase is processed by Google Play Billing. We receive only a purchase token to verify your premium status &mdash; we do not have access to your payment details.</li>
+        </ul>
+
+        <h3>2.2 Automatically Collected Information</h3>
+
+        <h3>Firebase Analytics</h3>
+        <p>BlinkRead uses Google Firebase Analytics to understand app usage and improve the experience. Firebase automatically collects:</p>
+        <ul>
+            <li>App version, OS version, device model, screen resolution</li>
+            <li>Country, language, and timezone</li>
+            <li>App opens, session duration, and user engagement</li>
+            <li>Advertising ID (see Section 6 for details)</li>
+        </ul>
+        <p>We do <strong>not</strong> log any custom events that track your reading content, book titles, or personal text. Firebase data is processed by Google in accordance with <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
+
+        <h3>Firebase Crashlytics</h3>
+        <p>BlinkRead uses Firebase Crashlytics to collect crash reports and stability data. Crashlytics may collect:</p>
+        <ul>
+            <li>Crash stack traces and logs</li>
+            <li>Device information (model, OS version, memory usage)</li>
+            <li>App version and build number</li>
+        </ul>
+        <p>Crash data does not include your reading content or personal files. It is used solely to identify and fix app crashes.</p>
+
+        <h3>Firebase Cloud Messaging (Push Notifications)</h3>
+        <p>BlinkRead may use Firebase Cloud Messaging (FCM) to send push notifications, such as daily challenge reminders. FCM collects:</p>
+        <ul>
+            <li>FCM token (device-specific identifier for notifications)</li>
+            <li>Device information for delivery purposes</li>
+        </ul>
+        <p>The FCM token is stored locally on your device and is used solely to deliver push notifications. You can disable notifications by changing your device's notification settings for BlinkRead. We do not use FCM for marketing or tracking purposes.</p>
+
+        <h3>Google AdMob (Advertising)</h3>
+        <p>When you interact with advertisements displayed through Google AdMob, certain information may be collected including:</p>
+        <ul>
+            <li>Advertising ID and device identifiers</li>
+            <li>Ad interaction data (impressions, clicks)</li>
+            <li>IP address and approximate location (country/city level)</li>
+            <li>Device information (model, OS version, screen size)</li>
+        </ul>
+        <p>Premium users do not see ads, and AdMob data collection is minimized when ads are not loaded.</p>
+        <p>In the European Economic Area (EEA), United Kingdom, and Switzerland, we use Google's User Messaging Platform (UMP) SDK to obtain your consent before displaying personalized ads. You may choose to see non-personalized ads or no ads at all (with a Premium purchase).</p>
+        <p>This data is processed by Google AdMob in accordance with <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
+
+        <h3>Google ML Kit</h3>
+        <p>BlinkRead uses Google ML Kit for on-device document scanning and text recognition. ML Kit processes images entirely on your device. Google may collect:</p>
+        <ul>
+            <li>Telemetry data about ML Kit usage (model version, success/failure rates)</li>
+            <li>Device information for service improvement</li>
+        </ul>
+        <p>Your actual images and extracted text are <strong>never</strong> sent to Google's servers. All processing happens on-device.</p>
+
+        <h2>3. How We Use Information</h2>
+        <p>All data collected is used solely for the following purposes:</p>
+        <ul>
+            <li><strong>Reading progress</strong>: To remember where you stopped reading and allow you to continue</li>
+            <li><strong>Bookmarks</strong>: To save and display your bookmarks within the app</li>
+            <li><strong>User preferences</strong>: To apply your chosen theme, font settings, and reading configuration</li>
+            <li><strong>Reading statistics</strong>: To track your reading statistics (words read, time spent, WPM) stored locally</li>
+            <li><strong>Achievements</strong>: To track unlocked achievements and reading milestones stored locally</li>
+            <li><strong>Challenge mode</strong>: To track your daily reading challenge progress and quiz scores stored locally</li>
+            <li><strong>Analytics</strong>: To understand app usage patterns and improve BlinkRead (via Firebase Analytics)</li>
+            <li><strong>Crash reporting</strong>: To identify and fix app crashes (via Firebase Crashlytics)</li>
+            <li><strong>Advertising</strong>: To display relevant advertisements and support the free version of the app (via AdMob)</li>
+            <li><strong>In-app purchases</strong>: To verify your Premium purchase and activate ad-free mode (via Google Play Billing)</li>
+            <li><strong>In-app purchases</strong>: To verify your Premium purchase and activate ad-free mode (via Google Play Billing)</li>
+            <li><strong>Notifications</strong>: To show recording status notifications during active screen recording sessions and daily challenge reminders (via Firebase Cloud Messaging)</li>
+        </ul>
+
+        <h2>4. Data Storage &amp; Security</h2>
+        <ul>
+            <li><strong>Local storage only</strong>: All reading content, bookmarks, preferences, statistics, achievements, challenge data, and scanned documents are stored locally on your device using Android's encrypted storage (DataStore) and local database (Room/SQLite).</li>
+            <li><strong>Screen recordings</strong>: If you use the recording feature, video files are saved locally to your device's app storage. Recordings are never uploaded or shared without your explicit action (via Android's share sheet).</li>
+            <li><strong>No cloud sync</strong>: We do not currently sync any data to the cloud. All app data remains on your device.</li>
+            <li><strong>Third-party processing</strong>: Firebase Analytics, Firebase Crashlytics, AdMob, Google Play Billing, Google ML Kit, and the Google UMP SDK process data on Google's servers as described in this policy.</li>
+            <li><strong>No cloud backup of app data</strong>: While Android may back up app data to Google Drive, this is under your personal Google account and is not accessible to us.</li>
+        </ul>
+
+        <h2>5. Permissions We Request</h2>
+        <table>
+            <tbody><tr>
+                <th>Permission</th>
+                <th>Purpose</th>
+            </tr>
+            <tr>
+                <td>Internet</td>
+                <td>Required for displaying advertisements (AdMob), Firebase Analytics, and verifying in-app purchases</td>
+            </tr>
+            <tr>
+                <td>Network State</td>
+                <td>Required to check network connectivity before loading ads and processing purchases</td>
+            </tr>
+            <tr>
+                <td>Advertising ID</td>
+                <td>Required by Google AdMob for ad personalization and by Firebase Analytics</td>
+            </tr>
+            <tr>
+                <td>Billing</td>
+                <td>Required by Google Play to process in-app purchases (Premium)</td>
+            </tr>
+            <tr>
+                <td>Foreground Service</td>
+                <td>Required for the screen recording feature to continue recording while you use the app</td>
+            </tr>
+            <tr>
+                <td>Post Notifications</td>
+                <td>Required to display the recording status notification during active screen recording sessions (Android 13+)</td>
+            </tr>
+        </tbody></table>
+        <p>We do not request camera, location, contacts, microphone, or phone permissions. The document scanner uses Google ML Kit's built-in scanner UI which manages camera access independently &mdash; BlinkRead does not access the camera directly.</p>
+
+        <h2>6. Advertising ID</h2>
+        <p>BlinkRead requests the Advertising ID (AAID) permission as required by Google AdMob and Firebase Analytics. This identifier is used for:</p>
+        <ul>
+            <li>Delivering and measuring advertisements</li>
+            <li>Firebase Analytics app usage measurement</li>
+            <li>Firebase Crashlytics crash reporting</li>
+        </ul>
+        <p>The Advertising ID is not connected to personally-identifiable information without your explicit consent. You can:</p>
+        <ul>
+            <li>Reset your Advertising ID in device settings (Settings &rarr; Google &rarr; Ads &rarr; Reset advertising ID)</li>
+            <li>Delete your Advertising ID on newer Android devices (Settings &rarr; Google &rarr; Ads &rarr; Delete advertising ID)</li>
+            <li>Opt out of personalized advertising in device settings (Settings &rarr; Google &rarr; Opt out of Ads Personalization)</li>
+        </ul>
+        <p>If you opt out of personalized advertising, we will serve non-personalized (contextual) ads instead.</p>
+
+        <h2>7. Third-Party Services</h2>
+        <table>
+            <tbody><tr>
+                <th>Service</th>
+                <th>Purpose</th>
+                <th>Data Collected</th>
+                <th>Privacy Policy</th>
+            </tr>
+            <tr>
+                <td>Google AdMob</td>
+                <td>Display advertisements in the free version</td>
+                <td>Advertising ID, device info, ad interactions, IP address</td>
+                <td><a href="https://policies.google.com/privacy">Google Privacy Policy</a></td>
+            </tr>
+            <tr>
+                <td>Firebase Analytics</td>
+                <td>Understand app usage and improve the experience</td>
+                <td>Device info, app usage, session data, country/language</td>
+                <td><a href="https://firebase.google.com/support/privacy">Firebase Privacy</a></td>
+            </tr>
+            <tr>
+                <td>Firebase Crashlytics</td>
+                <td>Crash reporting and stability monitoring</td>
+                <td>Crash logs, device info, app version</td>
+                <td><a href="https://firebase.google.com/support/privacy">Firebase Privacy</a></td>
+            </tr>
+            <tr>
+                <td>Firebase Cloud Messaging</td>
+                <td>Push notification delivery</td>
+                <td>FCM token, device info</td>
+                <td><a href="https://firebase.google.com/support/privacy">Firebase Privacy</a></td>
+            </tr>
+            <tr>
+                <td>Google Play Billing</td>
+                <td>Process Premium in-app purchases</td>
+                <td>Purchase tokens, product IDs</td>
+                <td><a href="https://policies.google.com/privacy">Google Privacy Policy</a></td>
+            </tr>
+            <tr>
+                <td>Google ML Kit</td>
+                <td>On-device document scanning and text recognition</td>
+                <td>Telemetry only; images stay on-device</td>
+                <td><a href="https://developers.google.com/ml-kit/terms">ML Kit Terms</a></td>
+            </tr>
+            <tr>
+                <td>Google UMP SDK</td>
+                <td>Consent management for ads in EEA/UK/CH</td>
+                <td>Consent choices</td>
+                <td><a href="https://policies.google.com/privacy">Google Privacy Policy</a></td>
+            </tr>
+        </tbody></table>
+
+        <h2>8. Children's Privacy</h2>
+        <p>This app is not intended for children under 13. We do not knowingly collect personal information from children. We do not enroll in Google Play's Families Policy program. If you believe we have inadvertently collected information from a child under 13, please contact us at <a href="mailto:Resauce.ml@gmail.com">Resauce.ml@gmail.com</a> and we will promptly delete it.</p>
+
+        <h2>9. Your Rights</h2>
+        <p>Since all reading content and app data is stored locally on your device, you have full control:</p>
+        <ul>
+            <li>You can delete the app to remove all local data</li>
+            <li>You can clear app data in Android Settings &rarr; Apps &rarr; BlinkRead &rarr; Clear Data</li>
+            <li>Uninstalling the app removes all stored data</li>
+            <li>You can reset or delete your Advertising ID in device settings</li>
+            <li>You can opt out of personalized ads in device settings (Settings &rarr; Google &rarr; Ads)</li>
+            <li>In the EEA/UK/CH, you can manage your ad consent preferences via the in-app consent dialog</li>
+            <li>Premium users can restore purchases at any time via the app's Settings</li>
+        </ul>
+
+        <h2>10. Data Deletion</h2>
+        <p>All app data is stored locally. To delete your data:</p>
+        <ol>
+            <li>Go to Android Settings &rarr; Apps &rarr; BlinkRead</li>
+            <li>Tap "Storage" &rarr; "Clear Data"</li>
+            <li>Or simply uninstall the app</li>
+        </ol>
+        <p>This removes all books, bookmarks, reading history, preferences, statistics, achievements, challenge progress, scanned documents, and any recorded videos. No data remains on our servers because we do not store your data on any server.</p>
+        <p>For data collected by third-party services (AdMob, Firebase), refer to the respective privacy policies listed in Section 7. For a formal data deletion request, contact us at <a href="mailto:Resauce.ml@gmail.com">Resauce.ml@gmail.com</a> or visit our <a href="https://resauce.github.io/blinkread/data-deletion.html">Data Deletion Request</a> page.</p>
+
+        <h2>11. GDPR &amp; EEA/UK Rights</h2>
+        <p>If you are located in the European Economic Area (EEA), United Kingdom, or Switzerland, you have additional rights under the General Data Protection Regulation (GDPR):</p>
+        <ul>
+            <li><strong>Right to access</strong>: You can request a copy of your data (all data is stored locally on your device)</li>
+            <li><strong>Right to rectification</strong>: You can modify any data within the app directly</li>
+            <li><strong>Right to erasure</strong>: You can delete all data by clearing app data or uninstalling (see Section 10)</li>
+            <li><strong>Right to data portability</strong>: You can export your reading data via the app's share features</li>
+            <li><strong>Right to object</strong>: You can opt out of personalized advertising at any time</li>
+            <li><strong>Right to withdraw consent</strong>: You can change your ad consent preferences at any time through the in-app consent dialog or device settings</li>
+        </ul>
+        <p>The legal basis for processing is your consent (for advertising and analytics) and legitimate interest (for crash reporting and app functionality).</p>
+
+        <h2>12. California Privacy Rights (CCPA)</h2>
+        <p>If you are a California resident, you have the right to know what personal information is collected, used, and shared. As described in this policy:</p>
+        <ul>
+            <li>We do not sell your personal information</li>
+            <li>All reading content stays on your device</li>
+            <li>Third-party services (AdMob, Firebase) may collect advertising identifiers and device information as described above</li>
+            <li>You can opt out of personalized advertising at any time</li>
+        </ul>
+
+        <h2>13. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. If we make material changes, we will notify you by updating the "Last Updated" date above. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+
+        <h2>14. Contact Us</h2>
+        <div class="contact-info">
+            <h3>Re:sauce</h3>
+            <p>If you have any questions about this Privacy Policy, please contact us:</p>
+            <p><strong>Email:</strong> <a href="mailto:Resauce.ml@gmail.com">Resauce.ml@gmail.com</a></p>
+            <p><strong>Data Deletion Requests:</strong> <a href="mailto:Resauce.ml@gmail.com">Resauce.ml@gmail.com</a> (include "Data Deletion" in the subject line)</p>
+            <p><strong>Response Time:</strong> We will respond to privacy inquiries within 7 business days.</p>
+        </div>
+
+        <h2>15. Governing Law</h2>
+        <p>This Privacy Policy shall be governed by and construed in accordance with applicable laws.</p>
+    </div>
+</body>
+</html>
