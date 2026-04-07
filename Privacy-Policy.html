@@ -103,7 +103,7 @@
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        <p class="last-updated">Last Updated: April 1, 2026</p>
+        <p class="last-updated">Last Updated: April 8, 2026</p>
 
         <h2>1. Introduction</h2>
         <p>BlinkRead ("we," "our," or "us") is a speed reading application developed and operated by Re:sauce. This Privacy Policy explains how we collect, use, disclose, and safeguard information when you use our mobile application.</p>
@@ -144,6 +144,14 @@
         </ul>
         <p>Crash data does not include your reading content or personal files. It is used solely to identify and fix app crashes.</p>
 
+        <h3>Firebase Cloud Messaging (Push Notifications)</h3>
+        <p>BlinkRead may use Firebase Cloud Messaging (FCM) to send push notifications, such as daily challenge reminders. FCM collects:</p>
+        <ul>
+            <li>FCM token (device-specific identifier for notifications)</li>
+            <li>Device information for delivery purposes</li>
+        </ul>
+        <p>The FCM token is stored locally on your device and is used solely to deliver push notifications. You can disable notifications by changing your device's notification settings for BlinkRead. We do not use FCM for marketing or tracking purposes.</p>
+
         <h3>Google AdMob (Advertising)</h3>
         <p>When you interact with advertisements displayed through Google AdMob, certain information may be collected including:</p>
         <ul>
@@ -177,7 +185,8 @@
             <li><strong>Crash reporting</strong>: To identify and fix app crashes (via Firebase Crashlytics)</li>
             <li><strong>Advertising</strong>: To display relevant advertisements and support the free version of the app (via AdMob)</li>
             <li><strong>In-app purchases</strong>: To verify your Premium purchase and activate ad-free mode (via Google Play Billing)</li>
-            <li><strong>Notifications</strong>: To show recording status notifications during active screen recording sessions</li>
+            <li><strong>In-app purchases</strong>: To verify your Premium purchase and activate ad-free mode (via Google Play Billing)</li>
+            <li><strong>Notifications</strong>: To show recording status notifications during active screen recording sessions and daily challenge reminders (via Firebase Cloud Messaging)</li>
         </ul>
 
         <h2>4. Data Storage &amp; Security</h2>
@@ -261,6 +270,12 @@
                 <td>Firebase Crashlytics</td>
                 <td>Crash reporting and stability monitoring</td>
                 <td>Crash logs, device info, app version</td>
+                <td><a href="https://firebase.google.com/support/privacy">Firebase Privacy</a></td>
+            </tr>
+            <tr>
+                <td>Firebase Cloud Messaging</td>
+                <td>Push notification delivery</td>
+                <td>FCM token, device info</td>
                 <td><a href="https://firebase.google.com/support/privacy">Firebase Privacy</a></td>
             </tr>
             <tr>
