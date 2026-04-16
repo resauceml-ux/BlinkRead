@@ -217,6 +217,18 @@
                 <td>Android DataStore</td>
                 <td>&#x2705; Yes</td>
             </tr>
+            <tr>
+                <td>Collaborate Feature</td>
+                <td>User suggestions stored in Firebase Firestore (ANDROID_ID-based user identifier, display name, suggestions)</td>
+                <td>Firebase Firestore</td>
+                <td>&#x2705; Yes (via request)</td>
+            </tr>
+            <tr>
+                <td>Rankings</td>
+                <td>Username, reading stats, challenge scores stored in Firebase Firestore</td>
+                <td>Firebase Firestore</td>
+                <td>&#x2705; Yes (via request)</td>
+            </tr>
         </table>
 
         <h2>3. Data Collected by Third-Party Services</h2>
@@ -257,6 +269,11 @@
                 <td>Google ML Kit</td>
                 <td>Usage telemetry (images processed on-device only)</td>
                 <td>See Method 3 below</td>
+            </tr>
+            <tr>
+                <td>Firebase Firestore</td>
+                <td>Collaborate suggestions, Rankings data (user identifier based on ANDROID_ID)</td>
+                <td>See Method 4 below</td>
             </tr>
         </table>
 
@@ -317,6 +334,19 @@
                 <li>We will respond within <strong>7 business days</strong></li>
             </ol>
             <p><em>Since all app data is stored locally on your device, we will guide you through Methods 1-3. For AdMob/Firebase data, we will forward your request to Google.</em></p>
+        </div>
+
+        <div class="method-box">
+            <h3>Method 5: Delete Collaborate &amp; Rankings Data</h3>
+            <p>Data stored in Firebase Firestore (Collaborate suggestions, Rankings) is linked to your device's ANDROID_ID. To delete this data:</p>
+            <ol>
+                <li>Email us at <a href="mailto:Resauce.ml@gmail.com">Resauce.ml@gmail.com</a> with subject <strong>"BlinkRead Data Deletion Request"</strong></li>
+                <li>Include your ANDROID_ID (found in Settings &rarr; About Phone &rarr; IMEI, or Settings &rarr; Developer Options &rarr; Stay awake)</li>
+                <li>We will delete your Collaborate submissions and Rankings entries from Firestore within 7 business days</li>
+            </ol>
+            <div class="info">
+                <strong>Note:</strong> Your ANDROID_ID is also used by Google AdMob and Firebase. If you want to completely reset your identity across all Google services, you may need to perform a factory reset after requesting data deletion.
+            </div>
         </div>
 
         <h2>5. Data Retention Periods</h2>
